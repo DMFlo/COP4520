@@ -1,11 +1,9 @@
 #Programming Assignment 1
 
-==================================================
 How to compile and run:
 - On command line do javac Primes.java
 - Then do Java Primes
 A file will then be created in current directory
-==================================================
 
 This program finds the number of primes between 0 and 10^8, finds the sum of all those primes, and then also returns an array with the ten largest primes found in order of lowest to greatest. 
 
