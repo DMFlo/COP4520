@@ -3,7 +3,7 @@
 ## How to compile and run:
 - On command line do javac Primes.java
 - Then do Java Primes
-A file will then be created in current directory
+- A file will then be created in current directory
 
 ## Summary
 
