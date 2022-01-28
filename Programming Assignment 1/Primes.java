@@ -10,9 +10,12 @@ public class Primes extends Thread
     public final static int max = 100000000;
     public final static int numOfThreads = 8;
 
-    int threadNum;
+    // Shared variables across each class
     public static boolean[] sieve = new boolean[max + 1];
     public static ArrayList<Primes> threads = new ArrayList<>();
+
+    // Unique variable to each thread class
+    int threadNum;
 
     // Each thread has a thread number of 0-7
     Primes(int threadNum)
@@ -25,7 +28,7 @@ public class Primes extends Thread
         // Sieve of Eratosthenes algorithm for finding primes in range 0 to N
         // Each thread handles an equal range in increments of all 8 threads
         for (int i = 2 + this.threadNum; i * i <= max; i += numOfThreads)
-            if (sieve[i] != true)
+            if (!sieve[i])
                 for (int j = i * i; j <= max; j += i)
                     sieve[j] = true;
     }
@@ -88,7 +91,7 @@ public class Primes extends Thread
         int count = 0;
         long primeSum = 0;
         for (int i = 2; i <= max; i++)
-            if (sieve[i] != true)
+            if (!sieve[i])
             {
                 primeSum += i;
                 count++;
