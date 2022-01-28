@@ -1,6 +1,6 @@
-#Programming Assignment 1
+# Programming Assignment 1
 
-How to compile and run:
+## How to compile and run:
 - On command line do javac Primes.java
 - Then do Java Primes
 A file will then be created in current directory
