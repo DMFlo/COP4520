@@ -5,6 +5,8 @@
 - Then do Java Primes
 A file will then be created in current directory
 
+## Summary
+
 This program finds the number of primes between 0 and 10^8, finds the sum of all those primes, and then also returns an array with the ten largest primes found in order of lowest to greatest. 
 
 The program utilizes the Sieve of Eratosthenes algorithm with the work evenly spread across 8 threads. It does this by designating a thread number to each thread and having each thread to a portion of the sieve in increments of 8 from that specific thread number. Through this method, each thread is handling an equal amount of work in the increasing squares of the algorithm. 
