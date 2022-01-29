@@ -84,7 +84,7 @@ public class Primes extends Thread
         for (int i = 0; i < numOfThreads; i++)
             threads.get(i).join();
  
-        // Clock ends
+        // Timer ends
         final long endTime = System.currentTimeMillis();
 
         // Compute number of Primes
