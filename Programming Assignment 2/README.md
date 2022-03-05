@@ -19,7 +19,7 @@ Parallelized with locks, this algorithm is very efficient with an average runtim
 
 For this program, a Minotaur wants to show his guests his favorite crystal vase, but does not want them crowding the room so restricts access to one guest at a time. 
 
-I am given the option of three possible strategies for the guests. I decided to go with strategy 2 where a sign indicating whether the showroom is available with either an "AVAILABLE" or "BUSY". The guests set the sign to BUSY when using and AVAILABLE when not so other guests don't even bother going to the showroom until it is available. 
+I am given the option of three possible strategies for the guests. I decided to go with strategy 2 where a sign indicating whether the showroom is available with either an "AVAILABLE" or "BUSY". The guests set the sign to BUSY when using and AVAILABLE when not so other guests don't even bother going to the showroom until it is available. The advantages of this strategy is that the guests can do other work and not waste time in a queue line. The disadvantage of this strategy is that a guest may have to wait a very long time before they can see the vase as other guests can re-enter indefinitely and they need to catch the room in available. 
 
 My algorithm had once again each guest represented by a thread. Here all threads run concurrently and check if the availableBusy boolean is true(available) or false(busy). If busy they simply continue on their way, however if available they switch the boolean and enjoy the vase for a few milliseconds. The threads(guests) may re-queue in random order and the program will stop once all guests have seen the vase at least once.
 
