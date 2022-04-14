@@ -97,8 +97,10 @@ public class AtmosphericModule extends Thread
             if (i == j * 80)
             {
                 if ((ranges[0] - ranges[1]) > ranges[2])
+                {
                     ranges[2] = ranges[0] - ranges[1];
                     ranges[3] = j++;
+                }
             }
         }
 
